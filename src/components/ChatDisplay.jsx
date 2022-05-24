@@ -1,4 +1,5 @@
 import React from 'react';
+import { COMMAND_DATA } from '../constants/commands';
 
 import './ChatDisplay.css';
 
@@ -11,7 +12,7 @@ const ChatDisplay = ({messages}) => {
             key={i}
             className={`message-item ${
               message.ownedByCurrentUser ? 'my-message' : 'received-message'
-            } ${message.command ? 'message-thought' : ''}`}
+            } ${message.command === COMMAND_DATA.think.key ? 'message-thought' : ''}`}
           >
             {message.body}
           </li>

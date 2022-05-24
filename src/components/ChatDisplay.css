@@ -13,6 +13,8 @@
 .messages-list {
   list-style-type: none;
   padding: 0;
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 .message-item {
@@ -28,6 +30,7 @@
 }
 
 .message-thought {
+  font-style: italic;
   color: darkslategray;
 }
 
