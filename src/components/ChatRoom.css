@@ -9,8 +9,19 @@
   margin: 16px;
 }
 
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+}
+
 .room-name {
   margin-top: 0;
+}
+
+.nickname-header {
+  font-size: 20px;
 }
 
 .messages-container {
@@ -19,11 +30,37 @@
   overflow: auto;
   border: 1px solid black;
   border-radius: 7px 7px 0 0;
+  padding: 0 1em;
+  background-color: rgba(234,239,242,1);
 }
 
 .messages-list {
   list-style-type: none;
   padding: 0;
+}
+
+.message-item {
+  width: fit-content;
+  max-width: 60%;
+  margin: 8px;
+  padding: 0.8em 1em;
+  word-break: break-word;
+  color: black;
+  font-weight: 600;
+  box-shadow: 0px 3px 8px darkgray, 0px -1px 3px darkslategrey;
+  position: relative;
+}
+
+.my-message {
+  border-radius: 20px 20px 0 20px;
+  background: linear-gradient(180deg, rgba(242,255,212,1) 0%, rgba(125,203,77,1) 30%, rgba(125,203,77,1) 70%, rgba(216,233,94,1) 100%);
+  margin-left: auto;
+}
+
+.received-message {
+  border-radius: 20px 20px 20px 0;
+  background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(215,215,215,1) 30%, rgba(215,215,215,1) 70%, rgba(240,240,240,1) 100%);
+  margin-right: auto;
 }
 
 .new-message-input-field {
@@ -32,25 +69,6 @@
   font-size: 20px;
   padding: 8px 12px;
   resize: none;
-}
-
-.message-item {
-  width: 55%;
-  margin: 8px;
-  padding: 12px 8px;
-  word-break: break-word;
-  border-radius: 4px;
-  color: white;
-}
-
-.my-message {
-  background-color: rgb(0, 132, 255);
-  margin-left: auto;
-}
-
-.received-message {
-  background-color: #3f4042;
-  margin-right: auto;
 }
 
 .send-message-button {
@@ -64,4 +82,5 @@
 
 .messages-container, .new-message-input-field, .send-message-button {
   border-color: #9a9a9a;
+  z-index: 2;
 }

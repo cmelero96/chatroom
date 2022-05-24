@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 
 import "./ChatRoom.css";
 import useChat from "../hooks/useChat";
 import { useParams } from 'react-router-dom'
 
 const ChatRoom = (props) => {
-  const { roomId } = useParams(); // Gets roomId from URL
-  const { messages, sendMessage } = useChat(roomId); // Creates a websocket and manages messaging
-  const [newMessage, setNewMessage] = React.useState(""); // Message to be sent
+  const { roomId } = useParams();
+  const { messages, sendMessage } = useChat(roomId);
+  const [newMessage, setNewMessage] = useState("");
+
+  const [nickname, setNickname] = useState("");
 
   const handleNewMessageChange = (event) => {
     setNewMessage(event.target.value);
@@ -20,7 +22,12 @@ const ChatRoom = (props) => {
 
   return (
     <div className="chat-room-container">
-      <h1 className="room-name">Room: {roomId}</h1>
+      <header className="header">
+        <h1 className="room-name">Room: {roomId}</h1>
+        {nickname && <div className="nickname-header">
+          Logged in as <b><i>{nickname}</i></b>
+        </div>}
+      </header>
       <div className="messages-container">
         <ol className="messages-list">
           {messages.map((message, i) => (
@@ -38,7 +45,7 @@ const ChatRoom = (props) => {
       <textarea
         value={newMessage}
         onChange={handleNewMessageChange}
-        placeholder="Write message..."
+        placeholder="Write message or type '/' for commands"
         className="new-message-input-field"
       />
       <button onClick={handleSendMessage} className="send-message-button">
