@@ -1,7 +1,8 @@
 .messages-container {
   flex: 1;
   min-height: 100px;
-  overflow: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
   border: 1px solid black;
   border-radius: 7px 7px 0 0;
   padding: 0 1em;
@@ -38,10 +39,26 @@
   border-radius: 20px 20px 0 20px;
   background: linear-gradient(180deg, rgba(242,255,212,1) 0%, rgba(125,203,77,1) 30%, rgba(125,203,77,1) 70%, rgba(216,233,94,1) 100%);
   margin-left: auto;
+  animation: slide-in-left 0.5s forwards;
 }
 
 .received-message {
   border-radius: 20px 20px 20px 0;
   background: linear-gradient(180deg, rgba(240,240,240,1) 0%, rgba(215,215,215,1) 30%, rgba(215,215,215,1) 70%, rgba(240,240,240,1) 100%);
   margin-right: auto;
+  animation: slide-in-right 0.5s forwards;
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
 }
