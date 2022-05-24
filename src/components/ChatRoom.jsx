@@ -2,9 +2,10 @@ import React from "react";
 
 import "./ChatRoom.css";
 import useChat from "../hooks/useChat";
+import { useParams } from 'react-router-dom'
 
 const ChatRoom = (props) => {
-  const { roomId } = props.match.params; // Gets roomId from URL
+  const { roomId } = useParams(); // Gets roomId from URL
   const { messages, sendMessage } = useChat(roomId); // Creates a websocket and manages messaging
   const [newMessage, setNewMessage] = React.useState(""); // Message to be sent
 
