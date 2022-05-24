@@ -1,0 +1,53 @@
+{
+  "search.exclude": {
+       ".git": true,
+       "webroot/public/client/.eslintcache": true,
+       "webroot/public/client/dist": true,
+       "webroot/public/client/dll": true,
+       "webroot/public/client/flow-typed": true,
+       "webroot/public/client/node_modules": true,
+       "webroot/public/client/npm-debug.log.*": true,
+       "webroot/public/client/test/**/__snapshots__": true,
+       "webroot/public/client/yarn.lock": true
+  },
+  "editor.tabSize": 2,
+  "editor.detectIndentation": false,
+  "editor.insertSpaces": true,
+  // Format a file on save. A formatter must be available, the file must not be auto-saved, and editor must not be shutting down.
+  "editor.formatOnSave": false,
+  "editor.formatOnPaste": false,
+  "editor.codeActionsOnSave": [
+       "source.formatDocument",
+       "source.fixAll.eslint"
+  ],
+  "vetur.format.defaultFormatter.html": "prettier",
+  "vetur.format.defaultFormatter.js": "prettier-eslint",
+  // Enable/disable default JavaScript formatter (For Prettier)
+  "javascript.format.enable": false,
+  // Turns auto fix on save on or off.
+  "git.ignoreLimitWarning": true,
+  "eslint.workingDirectories": ["./webroot/client"],
+  "eslint.validate": ["javascript", "javascriptreact", "html", "vue"],
+  "[json]": {
+       "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[html]": {
+       "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+       "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[jsonc]": {
+       "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+       "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[scss]": {
+       "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[php]": {
+       "editor.defaultFormatter": "bmewburn.vscode-intelephense-client",
+       "editor.formatOnSave": true
+  }
+}
