@@ -1,3 +1,9 @@
+## Time tracking
+First commit at 12:19
+Working until break at 13:04
+Resumed work at about 14:30
+Working until break at 17:14
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
