@@ -1,6 +1,6 @@
 .command-tooltip-container {
   position: absolute;
-  bottom: calc(100% - 0.5em);
+  bottom: 100%;
   left: 1px;
   z-index: 2;
   width: fit-content;
