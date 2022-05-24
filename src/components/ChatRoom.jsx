@@ -4,15 +4,26 @@ import "./ChatRoom.css";
 import useChat from "../hooks/useChat";
 import { useParams } from 'react-router-dom'
 
+import { COMMANDS, TOOLTIPS } from "../constants/commands";
+
 const ChatRoom = (props) => {
   const { roomId } = useParams();
   const { messages, sendMessage } = useChat(roomId);
   const [newMessage, setNewMessage] = useState("");
 
   const [nickname, setNickname] = useState("");
+  const [validCommands, setValidCommands] = useState([]);
 
   const handleNewMessageChange = (event) => {
-    setNewMessage(event.target.value);
+    const message = event.target.value;
+
+    if (message.startsWith("/")) {
+      setValidCommands(COMMANDS.filter(c => c.startsWith(message.slice(1))));
+    } else {
+      setValidCommands([]);
+    }
+
+    setNewMessage(message);
   };
 
   const handleSendMessage = () => {
