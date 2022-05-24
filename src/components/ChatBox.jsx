@@ -20,7 +20,6 @@ const ChatBox = ({onSendMessage}) => {
   };
 
   const handleSendMessage = (event) => {
-    console.log(event);
     onSendMessage(newMessage);
     setNewMessage('');
   }
