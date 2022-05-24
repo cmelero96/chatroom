@@ -11,9 +11,23 @@
 
 .header {
   display: flex;
-  justify-content: space-between;
   align-items: center;
   padding: 0 16px;
+}
+
+.header > *:nth-child(1) {
+  width: 33%;
+  text-align: left;
+}
+
+.header > *:nth-child(2) {
+  width: 33%;
+  text-align: center;
+}
+
+.header > *:nth-child(3) {
+  width: 33%;
+  text-align: right;
 }
 
 .room-name {

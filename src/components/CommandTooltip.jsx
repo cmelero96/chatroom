@@ -18,10 +18,10 @@ const CommandTooltip = ({commands, onPickCommand}) => {
         <li
           className="command-tooltip"
           key={command.key}
-          onClick={() => onPickCommand(command.key)}
+          onClick={() => onPickCommand(command.textString)}
         >
           <span className="command-name">
-            <code>{command.key}</code>
+            <code>{command.textString}</code>
           </span>
           {command.parameterized && (
             <span className="command-parameter">
