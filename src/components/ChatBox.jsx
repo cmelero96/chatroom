@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import {COMMANDS, TOOLTIPS} from '../constants/commands';
+import React, {useState} from 'react';
+import {COMMANDS} from '../constants/commands';
 
-import "./ChatBox.css";
+import './ChatBox.css';
+import CommandTooltip from './CommandTooltip';
 
 const ChatBox = ({onSendMessage}) => {
   const [newMessage, setNewMessage] = useState('');
@@ -22,10 +23,11 @@ const ChatBox = ({onSendMessage}) => {
   const handleSendMessage = (event) => {
     onSendMessage(newMessage);
     setNewMessage('');
-  }
+  };
 
   return (
     <>
+      {!!validCommands.length && <CommandTooltip commands={validCommands} />}
       <textarea
         value={newMessage}
         onChange={handleNewMessageChange}
