@@ -1,1 +1,29 @@
+.command-tooltip-container {
+  position: absolute;
+  bottom: calc(100% - 0.5em);
+  left: 1px;
+  z-index: 2;
+  width: fit-content;
+  padding: 0.5em;
+  background: white;
+  list-style-type: none;
+  border-radius: 10px 10px 0 0;
+  box-shadow: 0px 3px 8px darkgray, 0px -1px 3px darkslategrey;
+}
 
+.command-tooltip {
+  padding: 0.2em;
+}
+
+.command-tooltip:hover {
+  background-color: rgba(180,180,180,0.4);
+  cursor: pointer;
+}
+
+.command-tooltip:not(:last-child) {
+  border-bottom: 1px solid rgba(180,180,180,0.4);
+}
+
+.command-tooltip > * {
+  padding-right: 0.5em;
+}

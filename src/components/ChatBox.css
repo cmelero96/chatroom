@@ -1,3 +1,8 @@
+.chatbox-wrapper {
+  position: relative;
+  width: 100%;
+}
+
 .new-message-input-field {
   height: 2em;
   max-height: 50%;
