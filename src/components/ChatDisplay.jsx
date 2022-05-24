@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import "./ChatDisplay.css";
+import './ChatDisplay.css';
 
 const ChatDisplay = ({messages}) => {
   return (
@@ -10,8 +10,8 @@ const ChatDisplay = ({messages}) => {
           <li
             key={i}
             className={`message-item ${
-              message.ownedByCurrentUser ? "my-message" : "received-message"
-            }`}
+              message.ownedByCurrentUser ? 'my-message' : 'received-message'
+            } ${message.command ? 'message-thought' : ''}`}
           >
             {message.body}
           </li>
