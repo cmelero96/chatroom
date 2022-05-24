@@ -9,6 +9,8 @@
   list-style-type: none;
   border-radius: 10px 10px 0 0;
   box-shadow: 0px 3px 8px darkgray, 0px -1px 3px darkslategrey;
+  font-size: 18px;
+  font-weight: 600;
 }
 
 .command-tooltip {
@@ -26,4 +28,8 @@
 
 .command-tooltip > * {
   padding-right: 0.5em;
+}
+
+.command-tooltip-description {
+  font-weight: 400;
 }
