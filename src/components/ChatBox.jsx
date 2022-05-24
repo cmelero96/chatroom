@@ -21,7 +21,7 @@ const ChatBox = ({onSendMessage}) => {
     setNewMessage(message);
   };
 
-  const handleSendMessage = (event) => {
+  const handleSendMessage = () => {
     onSendMessage(newMessage);
     setNewMessage('');
   };
@@ -30,6 +30,20 @@ const ChatBox = ({onSendMessage}) => {
     setNewMessage(command + ' ');
     setValidCommands([]);
     textareaRef.current.focus();
+  };
+
+  const handleKeyboardEvent = (event) => {
+    const key = event.code;
+
+    if (key === 'Enter' && !event.shiftKey) {
+      handleSendMessage();
+      event.preventDefault()
+    }
+
+    if (key === 'Escape') {
+      setValidCommands([]);
+      event.preventDefault()
+    }
   };
 
   return (
@@ -41,6 +55,7 @@ const ChatBox = ({onSendMessage}) => {
         ref={textareaRef}
         value={newMessage}
         onChange={handleNewMessageChange}
+        onKeyDown={handleKeyboardEvent}
         placeholder="Write message or type '/' for commands"
         className="new-message-input-field"
       />
