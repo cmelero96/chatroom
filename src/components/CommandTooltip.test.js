@@ -8,7 +8,7 @@ describe('CommandTooltip', () => {
 
   const mockPickCommand = jest.fn();
 
-  beforeEach(() => {
+  afterEach(() => {
     mockPickCommand.mockClear();
   });
 
