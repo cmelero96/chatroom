@@ -18,7 +18,6 @@ const ChatRoom = () => {
 
   useEffect(() => {
     const [lastMessage] = messages.slice(-1);
-    console.log(JSON.stringify(lastMessage, null, 2));
 
     if (lastMessage && (!lastMessage.command || lastMessage.command === COMMAND_DATA.think.key)) {
       setTextMessages((prev) => [...prev, lastMessage]);
