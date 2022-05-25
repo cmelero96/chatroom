@@ -1,8 +1,9 @@
 import React, {useRef, useState} from 'react';
-import {COMMANDS} from '../constants/commands';
 
-import './ChatBox.css';
+import {COMMANDS} from '../../constants/commands';
+
 import CommandTooltip from './CommandTooltip';
+import './ChatBox.css';
 
 const ChatBox = ({onSendMessage}) => {
   const [newMessage, setNewMessage] = useState('');

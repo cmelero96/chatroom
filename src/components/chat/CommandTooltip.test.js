@@ -1,6 +1,6 @@
 import {fireEvent, render, screen} from '@testing-library/react';
 import CommandTooltip from './CommandTooltip';
-import {COMMAND_DATA} from '../constants/commands';
+import {COMMAND_DATA} from '../../constants/commands';
 
 describe('CommandTooltip', () => {
   const MOCK_VALID_COMMANDS = ['think', 'oops'];

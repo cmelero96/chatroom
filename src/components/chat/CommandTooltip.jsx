@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from 'react';
-import {COMMAND_DATA} from '../constants/commands';
+
+import {COMMAND_DATA} from '../../constants/commands';
 
 import './CommandTooltip.css';
 

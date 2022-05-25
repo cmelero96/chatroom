@@ -1,12 +1,12 @@
 import React, {useState, useEffect} from 'react';
-
-import './ChatRoom.css';
-import useChat from '../hooks/useChat';
 import {useParams} from 'react-router-dom';
-import {COMMAND_DATA} from '../constants/commands';
 
-import ChatDisplay from './ChatDisplay';
-import ChatBox from './ChatBox';
+import useChat from '../../hooks/useChat';
+import {COMMAND_DATA} from '../../constants/commands';
+
+import ChatDisplay from '../chat/ChatDisplay';
+import ChatBox from '../chat/ChatBox';
+import './ChatRoom.css';
 
 const ChatRoom = () => {
   const {roomId} = useParams();

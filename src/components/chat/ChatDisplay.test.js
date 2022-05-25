@@ -1,6 +1,6 @@
 import {render, screen} from '@testing-library/react';
 import ChatDisplay from './ChatDisplay';
-import {COMMAND_DATA} from '../constants/commands';
+import {COMMAND_DATA} from '../../constants/commands';
 
 describe('ChatDisplay', () => {
   const MOCK_MESSAGES = [

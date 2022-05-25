@@ -1,5 +1,6 @@
 import React from 'react';
-import { COMMAND_DATA } from '../constants/commands';
+
+import { COMMAND_DATA } from '../../constants/commands';
 
 import './ChatDisplay.css';
 
