@@ -13,6 +13,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <input
+        data-testid="room-input"
         type="text"
         placeholder="Room"
         value={roomName}
