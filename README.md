@@ -1,8 +1,9 @@
-## Time tracking
-First commit at 12:19
-Working until break at 13:04
-Resumed work at about 14:30
-Working until break at 17:14
+## Time tracking by using commit timestamps
+- 12:19 to 13:04
+- 14:30 to 17:19
+- 12:00 to 13:25
+
+Total devoted time: 4 hours 59 minutes
 
 # Getting Started with Create React App
 
