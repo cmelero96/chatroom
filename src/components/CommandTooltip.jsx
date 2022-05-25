@@ -7,7 +7,7 @@ const CommandTooltip = ({commands, onPickCommand}) => {
   const [commandsData, setCommandsData] = useState([]);
 
   useEffect(() => {
-    const data = commands.map((command) => COMMAND_DATA[command]);
+    const data = commands.map((command) => COMMAND_DATA[command]).filter(c => !!c);
 
     setCommandsData(data);
   }, [commands]);
@@ -16,6 +16,7 @@ const CommandTooltip = ({commands, onPickCommand}) => {
     <ul className="command-tooltip-container">
       {commandsData.map((command) => (
         <li
+          data-testid="command-tooltip"
           className="command-tooltip"
           key={command.key}
           onClick={() => onPickCommand(command.textString)}
